@@ -1,19 +1,11 @@
-quiz video/
-├── server.py                ← (this new file)
-├── .env                     ← your API keys
-├── topics.txt               ← list of topics (one per line)
-├── calm_music.mp3           ← background music (optional)
-├── logo.jpg                 ← your watermark
-├── outro.mp4                ← pre‑saved outro video (optional)
-├── videos/                  ← created automatically
-└── requirements.txt         ← (for cloud deployment)
-
-
-create table if not exists public.generation_logs (
-  id bigint generated always as identity primary key,
-  topic text not null,
-  filename text,
-  supabase_url text,
-  status text not null default 'success',
-  created_at timestamptz default now()
-);
+Flask
+python-dotenv
+requests
+supabase
+APScheduler
+pyttsx3
+moviepy
+Pillow
+numpy
+gunicorn
+boto3
